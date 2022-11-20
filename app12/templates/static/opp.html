@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="{% static 'js.js' %}"></script>  
+        <link href="{% static 'style1/style2.css' %}" rel="stylesheet">
+        <link href="{% static 'style1/style4.css' %}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Parliament Club">
+        <meta name="keywords" content="Parliament Club,club,Parliament">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'images/logo.png' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Parliament Club</title>
+        <style>
+            h4{
+                 font-size: 1.5rem;
+                 margin: 1rem 0;
+                }
+                h1{
+                    font-size: 4rem;
+                    margin: 1.7rem 0;
+                    margin-bottom: 58rem;
+                }
+                .countdown{
+                            display: flex;
+                            margin-bottom: 49rem;
+                            margin-right: 6rem;
+                        }
+                        .countdown div{
+                            flex-basis: 100px;
+                            padding: 0.8rem 0.4rem;
+                            margin-right: 0.1rem;
+                           
+                        }
+                        .countdown div p{
+                            font-size: 30px;
+                            color: var(--lightColor);
+                            margin-bottom: 10px;
+                        }
+        </style>
+    </head>
+    
+    <body>
+        <section class="home" id="home">
+            <nav>
+                <h2>Opportunities<span>Club</span></h2>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}">About us</a></li>
+                    <li><a href="{% url 'home' %}">activeties</a></li>
+                    <li><a href="{% url 'opp' %}">opportunities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="content1">
+                    <div class="container-texts1">
+                        <h1>Avalable<span> Opportunities:-</span></h1></br>
+                    </div>
+            
+             
+                {% for title in titles %}      
+                <div class="card">
+                    <div class="container">
+                         <h4><b>Title: - {{ title.title }}</b></h4>
+                             <p> Description: - {{ title.Description }}</p>
+                    </div>
+                </div>
+                <div class="apply1">
+                    <a href="{{ title.app_url }}" class="btn">Apply now</a>
+                </div>  
+
+                     <div class="countdown">
+                        <div>
+                            <p id="days">00</p>
+                            <span>days</span>
+                        </div>
+                        <div>
+                            <p id="hours">00</p>
+                            <span>hours</span>
+                        </div>
+                        <div>
+                            <p id="minutes">00</p>
+                            <span>minutes</span>
+                        </div>
+                        <div>
+                            <p id="seconds">00</p>
+                            <span>seconds</span>
+                        </div>
+                     </div>
+            </div>
+        {% endfor %}
+
+            </div>
+        </section>
+        <footer>
+            <div class="footer-co" id="contact">
+                <h4>Contact Us</h4>
+                <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+        </footer>      
+    </body>

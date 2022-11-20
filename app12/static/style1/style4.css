@@ -1,0 +1,45 @@
+footer{
+    padding: 0.1rem var(--padding);
+    background-color: var(--bgColor-2);
+}
+footer .footer-co{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footer-co i{
+    text-align: center;
+    font-size: 3.12rem;
+    color: var(--primaryColor);
+    margin: 1rem;
+}
+a {
+    text-decoration: none;
+}
+.footer-co h4{
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.0rem;
+}
+.countdown{
+    display: flex;
+}
+.countdown div{
+    flex-basis: 200px;
+    padding: 0.8rem 0.4rem;
+    margin-right: 100px;
+}
+.countdown div p{
+    font-size: 30px;
+    color: var(--primaryColor);
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 1.7rem 0;
+}
+.apply1{
+    margin-bottom: 40rem;
+}

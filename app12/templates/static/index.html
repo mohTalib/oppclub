@@ -1,0 +1,67 @@
+{% extends "static/main.html" %}
+{% load static %}
+{% block body %}
+            <a href="{% url 'sub' %}" class="btn">Subsicrib</a>
+            </nav>
+            <div class="content">
+                <div class="container-texts">
+                    <h3>Hello <span>Folks!</span></h>
+                    <h4>Opportunities <span>club</span> is here!</h4>
+                    <a href="#activities" class="btn">Check the activeties</a>
+                </div>
+                <div class="container-images">
+                    <img src="{% static 'images/shape1.png' %}"  class="shape"/>
+                    <img src="{% static 'images/shape2.png' %}" class="pic"/>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about" >
+            <div class="container-images">
+                <img src="{% static 'images/shape3.png' %}" class="pic"/>
+            </div>
+            <div class="container-texts">
+                <h1>About <span>US</span></h1>
+                <p>
+                    a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering
+                    a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering
+                </p>
+
+            </div>
+            
+        </section>
+        <section class="activities" id="activities">
+            <h1 class="text-center"><span>Our</span> Activeties</h1>
+        <div class="box1">
+            <div class="card">
+                <i class="fa-solid fa-house-user"></i>
+                <h5>active 1</h5>
+                <div class="pr">
+                    <p>a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-house-user"></i>
+                <h5>active 2</h5>
+                <div class="pr">
+                    <p>a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-house-user"></i>
+                <h5>active 3</h5>
+                <div class="pr">
+                    <p>a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-house-user"></i>
+                <h5>active 4</h5>
+                <div class="pr">
+                   <p>a distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+{% endblock %}
+        

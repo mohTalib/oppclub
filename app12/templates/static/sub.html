@@ -1,0 +1,18 @@
+{% extends "static/main.html" %}
+{% block body %}
+            </nav>
+            <div class="content">
+                <div class="container-texts">
+                    <h3>Input <span>your email address</span></h>
+                    <h4>To get notified when we post a new <span>opportunity.</span></h4>
+                    <form action="https://formsubmit.co/your@email.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://Parliament.com/thank.html">
+                        <input type="email" name="email" placeholder="Enter your email" class="btn1" required>
+                        <button type="submit" class="btn">Submit</button>
+                   </form>
+                </div>
+            </div>
+        
+        
+{% endblock %}
